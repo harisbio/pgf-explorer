@@ -1,0 +1,438 @@
+{
+ "total_papers": 9993,
+ "fulltext_papers": 419,
+ "abstract_papers": 9574,
+ "meta_analysis_papers": 310,
+ "total_organisms": 1189,
+ "total_gene_families": 1848,
+ "total_journals": 615,
+ "total_countries": 72,
+ "total_tools": 714,
+ "rna_seq_rate": 59.9,
+ "qPCR_rate": 73.5,
+ "abstract_rna_seq_rate": 28.8,
+ "abstract_qPCR_rate": 37.9,
+ "functional_rate": 31.5,
+ "linked_papers": 9993,
+ "year_range": [
+  2000,
+  2026
+ ],
+ "top_countries": [
+  {
+   "label": "China",
+   "count": 7763
+  },
+  {
+   "label": "India",
+   "count": 430
+  },
+  {
+   "label": "United States",
+   "count": 246
+  },
+  {
+   "label": "Pakistan",
+   "count": 144
+  },
+  {
+   "label": "South Korea",
+   "count": 117
+  },
+  {
+   "label": "Turkey",
+   "count": 98
+  },
+  {
+   "label": "Brazil",
+   "count": 85
+  },
+  {
+   "label": "Canada",
+   "count": 68
+  },
+  {
+   "label": "Iran",
+   "count": 63
+  },
+  {
+   "label": "Australia",
+   "count": 60
+  }
+ ],
+ "top_journals": [
+  {
+   "label": "International Journal of Molecular Sciences",
+   "count": 1052
+  },
+  {
+   "label": "Frontiers in Plant Science",
+   "count": 851
+  },
+  {
+   "label": "BMC Plant Biology",
+   "count": 663
+  },
+  {
+   "label": "BMC Genomics",
+   "count": 632
+  },
+  {
+   "label": "Plants",
+   "count": 552
+  },
+  {
+   "label": "Genes",
+   "count": 372
+  },
+  {
+   "label": "PLoS ONE",
+   "count": 280
+  },
+  {
+   "label": "Scientific Reports",
+   "count": 262
+  },
+  {
+   "label": "Plant Physiology and Biochemistry",
+   "count": 254
+  },
+  {
+   "label": "PeerJ",
+   "count": 244
+  }
+ ],
+ "top_organisms": [
+  {
+   "label": "Oryza sativa",
+   "count": 572
+  },
+  {
+   "label": "Gossypium hirsutum",
+   "count": 481
+  },
+  {
+   "label": "Triticum aestivum",
+   "count": 449
+  },
+  {
+   "label": "Glycine max",
+   "count": 397
+  },
+  {
+   "label": "Zea mays",
+   "count": 390
+  },
+  {
+   "label": "Arabidopsis thaliana",
+   "count": 376
+  },
+  {
+   "label": "Solanum lycopersicum",
+   "count": 339
+  },
+  {
+   "label": "Gossypium raimondii",
+   "count": 275
+  },
+  {
+   "label": "Brassica napus",
+   "count": 271
+  },
+  {
+   "label": "Gossypium arboreum",
+   "count": 254
+  }
+ ],
+ "top_gene_families": [
+  {
+   "label": "WRKY",
+   "count": 282
+  },
+  {
+   "label": "NAC",
+   "count": 187
+  },
+  {
+   "label": "bHLH",
+   "count": 164
+  },
+  {
+   "label": "MADS-box",
+   "count": 149
+  },
+  {
+   "label": "AP2/ERF",
+   "count": 146
+  },
+  {
+   "label": "bZIP",
+   "count": 144
+  },
+  {
+   "label": "SPL (SBP-box)",
+   "count": 125
+  },
+  {
+   "label": "HSF",
+   "count": 122
+  },
+  {
+   "label": "MYB",
+   "count": 122
+  },
+  {
+   "label": "ARF",
+   "count": 120
+  }
+ ],
+ "top_tools_fulltext": [
+  {
+   "label": "MEGA",
+   "count": 356
+  },
+  {
+   "label": "MEME",
+   "count": 324
+  },
+  {
+   "label": "BLAST",
+   "count": 320
+  },
+  {
+   "label": "Pfam",
+   "count": 303
+  },
+  {
+   "label": "ExPASy",
+   "count": 273
+  },
+  {
+   "label": "PlantCARE",
+   "count": 273
+  },
+  {
+   "label": "GSDS",
+   "count": 247
+  },
+  {
+   "label": "HMMER",
+   "count": 235
+  },
+  {
+   "label": "SMART",
+   "count": 205
+  },
+  {
+   "label": "TBtools",
+   "count": 196
+  }
+ ],
+ "top_conditions": [
+  {
+   "label": "Tissues/organs",
+   "count": 5105
+  },
+  {
+   "label": "Development",
+   "count": 2805
+  },
+  {
+   "label": "Salt",
+   "count": 2430
+  },
+  {
+   "label": "Drought",
+   "count": 2267
+  },
+  {
+   "label": "Other",
+   "count": 1897
+  },
+  {
+   "label": "Other hormones",
+   "count": 1840
+  },
+  {
+   "label": "Cold",
+   "count": 1512
+  },
+  {
+   "label": "ABA",
+   "count": 1196
+  }
+ ],
+ "top_functional": [
+  {
+   "label": "Overexpression",
+   "count": 1355
+  },
+  {
+   "label": "Subcellular localization",
+   "count": 1080
+  },
+  {
+   "label": "Silencing (VIGS/RNAi)",
+   "count": 587
+  },
+  {
+   "label": "Transactivation/binding",
+   "count": 404
+  },
+  {
+   "label": "Heterologous expression",
+   "count": 388
+  },
+  {
+   "label": "Protein interaction assay",
+   "count": 359
+  }
+ ],
+ "family_classes": [
+  {
+   "label": "Transcription factor",
+   "count": 3241
+  },
+  {
+   "label": "Enzyme",
+   "count": 2516
+  },
+  {
+   "label": "Structural/other protein",
+   "count": 1083
+  },
+  {
+   "label": "Transporter/channel",
+   "count": 898
+  },
+  {
+   "label": "Kinase/receptor",
+   "count": 519
+  },
+  {
+   "label": "Mixed",
+   "count": 150
+  }
+ ],
+ "years": {
+  "2000": {
+   "full_text": 0,
+   "abstract": 3
+  },
+  "2001": {
+   "full_text": 0,
+   "abstract": 5
+  },
+  "2002": {
+   "full_text": 0,
+   "abstract": 17
+  },
+  "2003": {
+   "full_text": 1,
+   "abstract": 18
+  },
+  "2004": {
+   "full_text": 1,
+   "abstract": 20
+  },
+  "2005": {
+   "full_text": 2,
+   "abstract": 26
+  },
+  "2006": {
+   "full_text": 1,
+   "abstract": 31
+  },
+  "2007": {
+   "full_text": 5,
+   "abstract": 38
+  },
+  "2008": {
+   "full_text": 11,
+   "abstract": 45
+  },
+  "2009": {
+   "full_text": 3,
+   "abstract": 42
+  },
+  "2010": {
+   "full_text": 8,
+   "abstract": 64
+  },
+  "2011": {
+   "full_text": 6,
+   "abstract": 80
+  },
+  "2012": {
+   "full_text": 11,
+   "abstract": 108
+  },
+  "2013": {
+   "full_text": 18,
+   "abstract": 142
+  },
+  "2014": {
+   "full_text": 14,
+   "abstract": 212
+  },
+  "2015": {
+   "full_text": 14,
+   "abstract": 262
+  },
+  "2016": {
+   "full_text": 21,
+   "abstract": 307
+  },
+  "2017": {
+   "full_text": 18,
+   "abstract": 288
+  },
+  "2018": {
+   "full_text": 21,
+   "abstract": 349
+  },
+  "2019": {
+   "full_text": 27,
+   "abstract": 490
+  },
+  "2020": {
+   "full_text": 16,
+   "abstract": 592
+  },
+  "2021": {
+   "full_text": 23,
+   "abstract": 879
+  },
+  "2022": {
+   "full_text": 39,
+   "abstract": 1187
+  },
+  "2023": {
+   "full_text": 31,
+   "abstract": 1264
+  },
+  "2024": {
+   "full_text": 24,
+   "abstract": 1464
+  },
+  "2025": {
+   "full_text": 103,
+   "abstract": 1641
+  },
+  "2026": {
+   "full_text": 1,
+   "abstract": 0
+  }
+ },
+ "evidence_quotes": 49894,
+ "records_with_quotes": 9992,
+ "with_gene_count": 9320,
+ "median_genes": 39.0,
+ "file_sizes": {
+  "./data/pgf_explorer_records.csv": 6008295,
+  "./data/pgf_explorer_citations.bib": 3988109,
+  "./raw_data/evidence.csv": 4551540,
+  "./raw_data/fulltext_records.csv": 390962,
+  "./raw_data/abstract_records.csv": 4847294
+ }
+}

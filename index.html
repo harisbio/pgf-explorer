@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PGF-Explorer: a database of genome-wide gene family studies in plants</title>
+  <meta name="description"
+    content="An evidence-linked database of about 10,000 genome-wide gene family identification studies in plants, 2000-2025." />
+  <link rel="stylesheet" href="./assets/css/site.css?v=1.0.0" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="./index.html" aria-label="PGF-Explorer home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0b1f3a" stroke-width="2" stroke-linecap="round">
+            <path d="M4 12h5M9 6v12M9 6h5M9 18h5M14 3v6M14 15v6M14 3h6M14 9h6M14 15h6M14 21h6" />
+          </svg>
+        </span>
+        <span class="brand__name">PGF-Explorer</span>
+      </a>
+      <button class="site-nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav class="site-nav" id="siteNav" aria-label="Main">
+        <a href="./index.html" class="is-active" aria-current="page">Home</a>
+        <a href="./explorer.html">Explorer</a>
+        <a href="./downloads.html">Downloads</a>
+        <a href="./about.html">About &amp; citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- hero -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero__grid">
+          <div class="reveal">
+            <p class="eyebrow">Open research database</p>
+            <h1>Genome-wide gene family studies in plants, in one place.</h1>
+            <p class="hero__lead">
+              PGF-Explorer brings together <span id="leadPapers">about 10,000</span> studies that identified a gene
+              family across a whole plant genome, published from 2000 to 2025. Every record says what was studied, how,
+              and with what evidence, and every extracted value links to the sentence it came from.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--light" href="./explorer.html">Explore the database <span class="arrow">→</span></a>
+              <a class="btn btn--outline-light" href="./downloads.html">Download the data</a>
+            </div>
+          </div>
+          <form class="card hero__search reveal reveal-delay-2" action="./explorer.html" method="get" role="search">
+            <label for="heroQ">Search the records</label>
+            <p>A gene family, a species, a journal or an author.</p>
+            <div class="search-row">
+              <input id="heroQ" name="q" type="search" placeholder="e.g. WRKY rice" autocomplete="off" />
+              <button class="btn btn--navy" type="submit">Search</button>
+            </div>
+            <div class="examples" aria-label="Example searches">
+              <a href="./explorer.html?family=WRKY">WRKY</a>
+              <a href="./explorer.html?family=NAC">NAC</a>
+              <a href="./explorer.html?species=Triticum%20aestivum">Wheat</a>
+              <a href="./explorer.html?species=Oryza%20sativa">Rice</a>
+              <a href="./explorer.html?condition=Drought">Drought</a>
+              <a href="./explorer.html?meta=1">Meta-analysis studies</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="numbers" id="numbers">
+          <div class="card number reveal">
+            <div class="number__value" data-count="0" data-key="total_papers">0</div>
+            <div class="number__label">Studies</div>
+            <div class="number__note">genome-wide identifications</div>
+          </div>
+          <div class="card number reveal reveal-delay-1">
+            <div class="number__value" data-count="0" data-key="total_organisms">0</div>
+            <div class="number__label">Plant species</div>
+            <div class="number__note">from mosses to trees</div>
+          </div>
+          <div class="card number reveal reveal-delay-2">
+            <div class="number__value" data-count="0" data-key="total_gene_families">0</div>
+            <div class="number__label">Gene families</div>
+            <div class="number__note">standardized names</div>
+          </div>
+          <div class="card number reveal reveal-delay-3">
+            <div class="number__value" data-count="0" data-key="total_journals">0</div>
+            <div class="number__label">Journals</div>
+            <div class="number__note">peer-reviewed venues</div>
+          </div>
+          <div class="card number reveal reveal-delay-1">
+            <div class="number__value" data-count="0" data-key="total_countries">0</div>
+            <div class="number__label">Countries</div>
+            <div class="number__note">of corresponding authors</div>
+          </div>
+          <div class="card number reveal reveal-delay-2">
+            <div class="number__value" data-count="0" data-key="evidence_quotes">0</div>
+            <div class="number__label">Source quotes</div>
+            <div class="number__note">one behind each value</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- what it is -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">What it is</p>
+          <h2>A structured record of how plant gene families are studied</h2>
+          <p>Genome-wide gene family papers follow a common pattern, but their details are scattered across thousands of
+            articles. PGF-Explorer turns them into comparable records.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card card--hover feature reveal">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M4 6h16M4 12h16M4 18h10" />
+              </svg>
+            </div>
+            <h3>What each record holds</h3>
+            <p>The gene family and species studied, the number of genes found, phylogenetic groups, duplication types,
+              expression and validation evidence, conditions tested, and the article's bibliographic details.</p>
+          </article>
+          <article class="card card--hover feature reveal reveal-delay-1">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M7 8h10M7 12h6M5 4h14v12l-4 4H5z" />
+              </svg>
+            </div>
+            <h3>Traceable to the source</h3>
+            <p>Each extracted value carries the sentence it was taken from, so any entry can be checked against the
+              article in seconds. Every paper links to its article page.</p>
+          </article>
+          <article class="card card--hover feature reveal reveal-delay-2">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <circle cx="11" cy="11" r="6" />
+                <path d="M20 20l-4.5-4.5" />
+              </svg>
+            </div>
+            <h3>Who it is for</h3>
+            <p>Researchers planning a new gene family study, reviewers checking what has already been done, and anyone
+              studying how methods and research focus in the field have changed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- how it was built -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">How it was built</p>
+          <h2>From a literature search to checked records</h2>
+          <p>The same eligibility rules were applied throughout: original research that identifies a gene family across
+            a sequenced land-plant genome, published in English from 2000 to 2025.</p>
+        </div>
+        <div class="pipeline">
+          <article class="card card--hover step reveal">
+            <span class="step__n">1</span>
+            <h3>Search</h3>
+            <p>PubMed, Europe PMC and OpenAlex were searched with gene family and genome-wide terms plus a list of plant
+              names.</p>
+            <div class="step__fact"><strong>59,838</strong> records found</div>
+          </article>
+          <article class="card card--hover step reveal reveal-delay-1">
+            <span class="step__n">2</span>
+            <h3>Screening</h3>
+            <p>Titles and abstracts were screened against written criteria, with known eligible papers hidden among them
+              as a check.</p>
+            <div class="step__fact"><strong>97.9%</strong> of known papers recovered</div>
+          </article>
+          <article class="card card--hover step reveal reveal-delay-2">
+            <span class="step__n">3</span>
+            <h3>Extraction</h3>
+            <p>Each paper was read against a codebook that defines every field and its allowed values.</p>
+            <div class="step__fact"><strong>1,848</strong> gene family names standardized</div>
+          </article>
+          <article class="card card--hover step reveal reveal-delay-3">
+            <span class="step__n">4</span>
+            <h3>Validation</h3>
+            <p>A record was saved only when every value had the allowed format and a supporting quote found in the
+              article text.</p>
+            <div class="step__fact"><strong>Every</strong> value traced to a sentence</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- what the literature looks like -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">What is inside</p>
+          <h2>A quick look at the literature</h2>
+          <p>Click any bar to open those records in the Explorer.</p>
+        </div>
+        <div class="charts">
+          <article class="card chart chart--wide reveal">
+            <h3>Papers per year</h3>
+            <p class="chart__sub">Hover over a bar for the exact number</p>
+            <div class="years" id="years"></div>
+            <div class="years__axis" id="yearsAxis"></div>
+          </article>
+          <article class="card chart reveal">
+            <h3>Most studied gene families</h3>
+            <p class="chart__sub">Number of studies</p>
+            <ul class="hbars" id="families"></ul>
+          </article>
+          <article class="card chart reveal reveal-delay-1">
+            <h3>Most studied species</h3>
+            <p class="chart__sub">Number of studies</p>
+            <ul class="hbars" id="species"></ul>
+          </article>
+          <article class="card chart reveal">
+            <h3>Conditions studied</h3>
+            <p class="chart__sub">Number of studies naming each condition</p>
+            <ul class="hbars" id="conditions"></ul>
+          </article>
+          <article class="card chart reveal reveal-delay-1">
+            <h3>Corresponding-author countries</h3>
+            <p class="chart__sub">Number of studies</p>
+            <ul class="hbars" id="countries"></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- example record -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Every value has a source</p>
+          <h2>See where a record comes from</h2>
+          <p>Hover over or select a field to see the sentence in the article that supports it.</p>
+        </div>
+        <article class="card record reveal" id="record">
+          <div class="record__main">
+            <p class="eyebrow" style="color:#1e3a8a">Example record</p>
+            <h3 id="recTitle">Loading…</h3>
+            <p class="record__meta" id="recMeta"></p>
+            <dl class="fields" id="recFields"></dl>
+          </div>
+          <div class="record__source">
+            <h4>From the article</h4>
+            <blockquote class="quote" id="recQuote">Select a field.</blockquote>
+            <p class="record__hint" id="recHint"></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- next steps -->
+    <section class="section">
+      <div class="wrap">
+        <div class="cta">
+          <a class="card card--hover card-link reveal" href="./explorer.html">
+            <h3>Explore <span class="arrow">→</span></h3>
+            <p>Filter by family, species, country, evidence and more, then export what you find.</p>
+          </a>
+          <a class="card card--hover card-link reveal reveal-delay-1" href="./downloads.html">
+            <h3>Download <span class="arrow">→</span></h3>
+            <p>The complete dataset, citations for every paper, and the source files.</p>
+          </a>
+          <a class="card card--hover card-link reveal reveal-delay-2" href="./about.html">
+            <h3>About &amp; citation <span class="arrow">→</span></h3>
+            <p>Methods, field definitions, limitations and how to cite the database.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <h4>PGF-Explorer</h4>
+        <p>A database of genome-wide gene family identification studies in plants.</p>
+        <p>Developed by Muhammad Haris, Functional Genomics and Tissue Culture Lab, Department of Bioinformatics and
+          Biotechnology, Government College University Faisalabad, Pakistan.</p>
+        <p>Code: MIT License &middot; Data: CC BY 4.0</p>
+      </div>
+      <div>
+        <h4>Database</h4>
+        <ul>
+          <li><a href="./explorer.html">Explorer</a></li>
+          <li><a href="./downloads.html">Downloads</a></li>
+          <li><a href="./about.html">About &amp; citation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="https://github.com/harisbio/Genome_wide_PDF_extractor" target="_blank" rel="noopener">Extraction program</a></li>
+          <li><a href="https://github.com/harisbio/Meta_Analysis_Genomewide_In_silico_studies" target="_blank" rel="noopener">Meta-analysis code</a></li>
+          <li><a href="https://orcid.org/0009-0005-5162-052X" target="_blank" rel="noopener">ORCID</a></li>
+          <li><a href="https://harisbio.github.io/" target="_blank" rel="noopener">Website</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="tip" id="tip" role="tooltip"></div>
+  <script src="./assets/js/landing.js"></script>
+  <script src="./assets/js/site.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+node_modules/
+__pycache__/
+.DS_Store
+Thumbs.db
+*.log
+.env
+
+# local tools and helpers
+.claude/
+.kilo/
+.kilocode/
+start_database.bat
+
+# Article PDFs are not distributed: each record links to its article page instead.
+database/
+*.pdf

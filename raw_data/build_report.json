@@ -1,0 +1,66 @@
+{
+ "meta_analysis_records": 310,
+ "reextracted_records": 109,
+ "reextracted_skipped": [
+  {
+   "pid": "110",
+   "reason": "not eligible at full text: EXCLUDE: E8_NOT_GENE_FAMILY"
+  },
+  {
+   "pid": "499",
+   "reason": "not eligible at full text: EXCLUDE: E6_NOT_GENOME_WIDE"
+  },
+  {
+   "pid": "508",
+   "reason": "duplicate PDF of another database paper"
+  },
+  {
+   "pid": "510",
+   "reason": "duplicate PDF of another database paper"
+  },
+  {
+   "pid": "552",
+   "reason": "same paper as a meta-analysis record"
+  },
+  {
+   "pid": "553",
+   "reason": "not eligible at full text: EXCLUDE: E6_NOT_GENOME_WIDE"
+  },
+  {
+   "pid": "555",
+   "reason": "not eligible at full text: EXCLUDE: E6_NOT_GENOME_WIDE"
+  },
+  {
+   "pid": "572",
+   "reason": "not eligible at full text: EXCLUDE: E6_NOT_GENOME_WIDE"
+  },
+  {
+   "pid": "589",
+   "reason": "not eligible at full text: EXCLUDE: E6_NOT_GENOME_WIDE"
+  },
+  {
+   "pid": "597",
+   "reason": "not eligible at full text: EXCLUDE: E6_NOT_GENOME_WIDE"
+  },
+  {
+   "pid": "607",
+   "reason": "not eligible at full text: EXCLUDE: E8_NOT_GENE_FAMILY"
+  },
+  {
+   "pid": "612",
+   "reason": "not eligible at full text: EXCLUDE: E6_NOT_GENOME_WIDE"
+  },
+  {
+   "pid": "615",
+   "reason": "not eligible at full text: EXCLUDE: E6_NOT_GENOME_WIDE"
+  },
+  {
+   "pid": "619",
+   "reason": "not eligible at full text: EXCLUDE: E8_NOT_GENE_FAMILY"
+  }
+ ],
+ "abstract_records": 9574,
+ "abstract_matched_to_fulltext": 384,
+ "fulltext_total": 419,
+ "evidence_quotes": 49894
+}

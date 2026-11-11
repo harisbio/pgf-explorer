@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Downloads | PGF-Explorer</title>
+  <link rel="stylesheet" href="./assets/css/site.css?v=1.0.0" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="./index.html" aria-label="PGF-Explorer home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0b1f3a" stroke-width="2" stroke-linecap="round">
+            <path d="M4 12h5M9 6v12M9 6h5M9 18h5M14 3v6M14 15v6M14 3h6M14 9h6M14 15h6M14 21h6" />
+          </svg>
+        </span>
+        <span class="brand__name">PGF-Explorer</span>
+      </a>
+      <button class="site-nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav class="site-nav" id="siteNav" aria-label="Main">
+        <a href="./index.html">Home</a>
+        <a href="./explorer.html">Explorer</a>
+        <a href="./downloads.html" class="is-active" aria-current="page">Downloads</a>
+        <a href="./about.html">About &amp; citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="page-head reveal">
+      <p class="eyebrow">Downloads</p>
+      <h1>Take the data with you</h1>
+      <p>Everything shown in the Explorer is available as plain files. The data are released under CC BY 4.0: you may
+        reuse them with attribution, as described on the <a href="./about.html#cite" style="color:#fff">citation page</a>.
+      </p>
+    </section>
+
+    <h2 class="eyebrow" style="margin:8px 0 12px">Data</h2>
+    <div class="downloads">
+      <article class="card card--hover download reveal">
+        <div class="download__icon">CSV</div>
+        <div>
+          <h3>Complete dataset</h3>
+          <p>Every record with all extracted fields, one row per paper.</p>
+          <div class="download__meta"><span data-stat="total_papers"></span> records &middot; <span
+              data-size="./data/pgf_explorer_records.csv"></span> &middot; UTF-8</div>
+        </div>
+        <div class="download__actions">
+          <a class="btn btn--navy" href="./data/pgf_explorer_records.csv" download>Download</a>
+        </div>
+      </article>
+
+      <article class="card card--hover download reveal">
+        <div class="download__icon">QUOTE</div>
+        <div>
+          <h3>Supporting quotes</h3>
+          <p>The sentence from each article behind each extracted value: record ID, field and quote.</p>
+          <div class="download__meta"><span data-stat="evidence_quotes"></span> quotes &middot; <span
+              data-size="./raw_data/evidence.csv"></span></div>
+        </div>
+        <div class="download__actions">
+          <a class="btn btn--navy" href="./raw_data/evidence.csv" download>Download</a>
+        </div>
+      </article>
+
+      <article class="card card--hover download reveal">
+        <div class="download__icon">BIB</div>
+        <div>
+          <h3>Citations for every paper</h3>
+          <p>A BibTeX file with the authors, title, journal, year and DOI of each paper, ready for a reference manager.
+          </p>
+          <div class="download__meta"><span data-stat="total_papers"></span> entries &middot; <span
+              data-size="./data/pgf_explorer_citations.bib"></span></div>
+        </div>
+        <div class="download__actions">
+          <a class="btn btn--navy" href="./data/pgf_explorer_citations.bib" download>Download</a>
+        </div>
+      </article>
+
+
+      <article class="card card--hover download reveal">
+        <div class="download__icon">DOC</div>
+        <div>
+          <h3>Data dictionary</h3>
+          <p>What every field means and how missing information is recorded.</p>
+        </div>
+        <div class="download__actions">
+          <a class="btn btn--outline" href="./about.html#fields">Read online</a>
+          <a class="btn btn--outline" href="./docs/data_dictionary.md" download>Markdown</a>
+        </div>
+      </article>
+    </div>
+
+    <h2 class="eyebrow" style="margin:36px 0 12px">Software</h2>
+    <div class="downloads">
+      <article class="card card--hover download reveal">
+        <div class="download__icon">PY</div>
+        <div>
+          <h3>Extraction program</h3>
+          <p>The program used to extract the records, with its codebook and validation module.</p>
+          <div class="download__meta">Version 1.0.0 &middot; DOI 10.5281/zenodo.24104217 &middot; MIT License</div>
+        </div>
+        <div class="download__actions">
+          <a class="btn btn--outline" href="https://github.com/harisbio/Genome_wide_PDF_extractor" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn--outline" href="https://doi.org/10.5281/zenodo.24104217" target="_blank" rel="noopener">Zenodo</a>
+        </div>
+      </article>
+
+      <article class="card card--hover download reveal">
+        <div class="download__icon">JS</div>
+        <div>
+          <h3>Website and build script</h3>
+          <p>The code for this website and the script that builds its data files from the source records.</p>
+          <div class="download__meta">MIT License</div>
+        </div>
+        <div class="download__actions">
+          <a class="btn btn--outline" href="https://github.com/harisbio/pgf-explorer" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <h4>PGF-Explorer</h4>
+        <p>A database of genome-wide gene family identification studies in plants.</p>
+        <p>Code: MIT License &middot; Data: CC BY 4.0</p>
+      </div>
+      <div>
+        <h4>Database</h4>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./explorer.html">Explorer</a></li>
+          <li><a href="./about.html">About &amp; citation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="https://github.com/harisbio/Genome_wide_PDF_extractor" target="_blank" rel="noopener">Extraction program</a></li>
+          <li><a href="https://github.com/harisbio/Meta_Analysis_Genomewide_In_silico_studies" target="_blank" rel="noopener">Meta-analysis code</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // fill record counts and file sizes
+    fetch("./data/stats.json").then((r) => r.json()).then((s) => {
+      document.querySelectorAll("[data-stat]").forEach((el) => (el.textContent = Number(s[el.dataset.stat]).toLocaleString()));
+      const sizes = s.file_sizes || {};
+      document.querySelectorAll("[data-size]").forEach((el) => {
+        const n = sizes[el.dataset.size];
+        el.textContent = n ? (n > 1e6 ? `${(n / 1e6).toFixed(1)} MB` : `${Math.round(n / 1e3)} KB`) : "";
+      });
+    });
+  </script>
+  <script src="./assets/js/site.js"></script>
+</body>
+
+</html>

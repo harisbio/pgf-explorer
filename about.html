@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About &amp; citation | PGF-Explorer</title>
+  <link rel="stylesheet" href="./assets/css/site.css?v=1.0.0" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="./index.html" aria-label="PGF-Explorer home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0b1f3a" stroke-width="2" stroke-linecap="round">
+            <path d="M4 12h5M9 6v12M9 6h5M9 18h5M14 3v6M14 15v6M14 3h6M14 9h6M14 15h6M14 21h6" />
+          </svg>
+        </span>
+        <span class="brand__name">PGF-Explorer</span>
+      </a>
+      <button class="site-nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav class="site-nav" id="siteNav" aria-label="Main">
+        <a href="./index.html">Home</a>
+        <a href="./explorer.html">Explorer</a>
+        <a href="./downloads.html">Downloads</a>
+        <a href="./about.html" class="is-active" aria-current="page">About &amp; citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="page-head reveal">
+      <p class="eyebrow">About &amp; citation</p>
+      <h1>How PGF-Explorer was made, and how to cite it</h1>
+      <p>Scope, sources, extraction methods, field definitions, known limitations, and citation details.</p>
+    </section>
+
+    <div class="with-toc">
+      <nav class="card toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <a href="#about">About</a>
+        <a href="#scope">Scope</a>
+        <a href="#sources">Sources</a>
+        <a href="#extraction">Extraction</a>
+        <a href="#fields">Fields</a>
+        <a href="#quality">Quality checks</a>
+        <a href="#limitations">Limitations</a>
+        <a href="#cite">How to cite</a>
+        <a href="#version">Version and licence</a>
+        <a href="#team">Team and acknowledgements</a>
+      </nav>
+
+      <div>
+        <section class="card prose reveal" id="about">
+          <h2>About</h2>
+          <p>PGF-Explorer is a database of studies that identify a gene family across a whole plant genome. It records,
+            for each study, what was studied (gene family, species, number of genes), how it was studied (search
+            methods, tools, phylogeny, duplication analysis) and with what evidence (expression data, RT-qPCR and
+            functional experiments).</p>
+          <p>The database grew out of a systematic review and meta-analysis of genome-wide gene family identification in
+            plants. It makes the underlying records searchable and extends them to the wider literature, so that
+            researchers can see what has already been done for a family or species before starting a new study.</p>
+          <p>Each extracted value is stored with the sentence it was taken from, and each paper links to its article
+            page.</p>
+        </section>
+
+        <section class="card prose reveal" id="scope">
+          <h2>Scope</h2>
+          <p>A study is included when all of the following hold:</p>
+          <ul>
+            <li>it is an original research article, not a review, editorial or methods-only paper;</li>
+            <li>it identifies the members of a gene family (or superfamily) systematically from a sequenced genome or
+              proteome, rather than cloning a few genes or using a transcriptome alone;</li>
+            <li>the study organism is a land plant (studies of algae alone are excluded);</li>
+            <li>it describes an in-silico identification workflow;</li>
+            <li>it is published in English between 2000 and 2025.</li>
+          </ul>
+          <p>Studies of non-coding RNA families, pan-genome presence and absence studies, and studies in which plants are
+            a minor part of a mainly non-plant analysis are excluded.</p>
+        </section>
+
+        <section class="card prose reveal" id="sources">
+          <h2>Sources</h2>
+          <p>PubMed, Europe PMC and OpenAlex were searched for articles published from 2000 to 2025, using genome-wide and
+            gene family terms together with a list of plant terms. Of 59,838 records identified, 15,998 titles and
+            abstracts were screened after removing duplicates and clearly ineligible records. The eligible studies, together
+            with the <span data-stat="meta_analysis_papers">310</span> studies of the meta-analysis, form the <span
+              data-stat="total_papers">9,993</span> records of the database.</p>
+          <p>Titles, authors, journals and DOIs were checked against Crossref. Corresponding-author countries, citation
+            counts and field-weighted citation impact (FWCI) come from OpenAlex; citation data were retrieved in October
+            2026.</p>
+        </section>
+
+        <section class="card prose reveal" id="extraction">
+          <h2>Extraction</h2>
+          <p>Records were extracted with a purpose-built extraction program. It converts each article into
+            section-labelled text; Claude Sonnet (Anthropic), run through Claude Code, fills the fields defined in a
+            written codebook; and a validation module saves a record only when every value has its allowed format and is
+            supported by a quote found in the article text.</p>
+          <p>After extraction, controlled vocabularies were applied: species names were standardized to binomials, gene
+            family names and synonyms to one spelling (subfamilies are kept where the authors name them), tool names to
+            a standard list, and duplication types to a fixed set of categories.</p>
+          <p>The extraction program, its codebook and validation module are openly available (<a
+              href="https://github.com/harisbio/Genome_wide_PDF_extractor" target="_blank" rel="noopener">GitHub</a>,
+            <a href="https://doi.org/10.5281/zenodo.24104217" target="_blank" rel="noopener">Zenodo</a>).</p>
+        </section>
+
+        <section class="card prose reveal" id="fields">
+          <h2>Fields</h2>
+          <table>
+            <thead>
+              <tr><th>Group</th><th>Fields</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Bibliographic</td><td>Title, authors, year, journal, DOI, article link, corresponding-author country</td></tr>
+              <tr><td>What was studied</td><td>Gene family, study species, number of genes identified, reference species</td></tr>
+              <tr><td>How it was studied</td><td>Methods and tools, HMMER and Pfam IDs, BLAST E-value, genome source, phylogenetic groups, duplication types</td></tr>
+              <tr><td>Evidence</td><td>RNA-seq, RT-qPCR, microarray/EST, functional experiments, conditions studied, key genes</td></tr>
+              <tr><td>Impact</td><td>Citations and FWCI</td></tr>
+            </tbody>
+          </table>
+          <h3>How missing information is shown</h3>
+          <ul>
+            <li><strong>Yes</strong>: the paper reports it.</li>
+            <li><strong>&mdash;</strong> or <strong>Not reported</strong>: the extracted text does not report it; the
+              study may still have done it.</li>
+            <li>Fields with no value are left out of a record's detail view.</li>
+          </ul>
+          <p>A full description of every column is in the <a href="./docs/data_dictionary.md">data dictionary</a>.</p>
+        </section>
+
+        <section class="card prose reveal" id="quality">
+          <h2>Quality checks</h2>
+          <ul>
+            <li><strong>Screening sensitivity.</strong> Papers already known to be eligible were mixed, unlabelled, into
+              the screening; 97.9% of them were correctly included.</li>
+            <li><strong>Extraction agreement.</strong> In a pilot of 60 papers, automated extraction agreed with values
+              recorded by hand from the same papers for 95% of gene families and 88% of species.</li>
+            <li><strong>Source checking.</strong> Every saved value had to be supported by a quote found in the article
+              text; the quotes are published with the data.</li>
+            <li><strong>Eligibility.</strong> Papers judged not to be genome-wide gene family studies on
+              closer reading (for example, genes cloned individually, or genes taken from a database without a
+              search) were removed.</li>
+          </ul>
+        </section>
+
+        <section class="card prose reveal" id="limitations">
+          <h2>Limitations</h2>
+          <ul>
+            <li>Papers do not always report every method in the text that was extracted, so a method shown as "—" may
+              still have been used, and method shares are lower limits.</li>
+            <li>The search was limited to three databases and to English-language articles; some eligible studies,
+              especially in regional journals, may be missing.</li>
+            <li>Quote checking confirms that each value is supported by text in the article, not that every
+              interpretation is correct. Users should consult the article before relying on a single value.</li>
+            <li>Country refers to the corresponding author only.</li>
+            <li>Citation counts change over time; recent papers have had little time to be cited.</li>
+          </ul>
+        </section>
+
+        <section class="card prose reveal" id="cite">
+          <h2>How to cite</h2>
+          <h3>The database</h3>
+          <div class="cite" id="dbCite">Haris M, Azeem F, Golokhvast KS, Nawaz MA. PGF-Explorer: a database of
+            genome-wide gene family identification studies in plants. Version 1.0. 2026.
+            https://harisbio.github.io/pgf-explorer/</div>
+          <button type="button" class="btn btn--outline" id="copyCite">Copy citation</button>
+          <h3>The meta-analysis</h3>
+          <p>Haris M, Azeem F, Golokhvast KS, Nawaz MA. Twenty-five years of genome-wide gene family identification
+            analysis in plants: trends, tools, and methodological shifts. A systematic review and meta-analysis.
+            Citation details will be added on publication.</p>
+          <h3>Individual papers</h3>
+          <p>When you use a record, please also cite the original article. Citations for every paper are on the <a
+              href="./downloads.html">Downloads</a> page.</p>
+        </section>
+
+        <section class="card prose reveal" id="version">
+          <h2>Version and licence</h2>
+          <p><strong>Version 1.0</strong> (November 2026): <span data-stat="total_papers">9,993</span> records, <span data-stat="evidence_quotes">49,894</span> supporting quotes.</p>
+          <p>Data are released under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+              rel="noopener">Creative Commons Attribution 4.0 licence</a>; the website and build code under the MIT
+            License. Article titles and bibliographic details belong to their publishers and are shown for
+            identification only.</p>
+        </section>
+
+        <section class="card prose reveal" id="team">
+          <h2>Team and acknowledgements</h2>
+          <p><strong>Muhammad Haris</strong> (design, data curation, development), Functional Genomics and Tissue Culture
+            Lab, Department of Bioinformatics and Biotechnology, Government College University Faisalabad, Pakistan
+            &middot; <a href="https://orcid.org/0009-0005-5162-052X" target="_blank" rel="noopener">ORCID</a>
+            &middot; <a href="https://github.com/harisbio" target="_blank" rel="noopener">GitHub</a></p>
+          <p>With Farrukh Azeem, Kirill Sergeevich Golokhvast and Muhammad Amjad Nawaz.</p>
+          <p>Claude (Anthropic) was used to screen and extract data from the articles under written codebooks, and to
+            help write the analysis and website code. All outputs were checked against the source text by the
+            validation module described above, and the authors are responsible for the content.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <h4>PGF-Explorer</h4>
+        <p>A database of genome-wide gene family identification studies in plants.</p>
+        <p>Code: MIT License &middot; Data: CC BY 4.0</p>
+      </div>
+      <div>
+        <h4>Database</h4>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./explorer.html">Explorer</a></li>
+          <li><a href="./downloads.html">Downloads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="https://github.com/harisbio/Genome_wide_PDF_extractor" target="_blank" rel="noopener">Extraction program</a></li>
+          <li><a href="https://github.com/harisbio/Meta_Analysis_Genomewide_In_silico_studies" target="_blank" rel="noopener">Meta-analysis code</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    fetch("./data/stats.json").then((r) => r.json()).then((s) => {
+      document.querySelectorAll("[data-stat]").forEach((el) => (el.textContent = Number(s[el.dataset.stat]).toLocaleString()));
+    });
+    document.getElementById("copyCite").addEventListener("click", async (e) => {
+      const text = document.getElementById("dbCite").innerText.replace(/\s+/g, " ").trim();
+      try {
+        await navigator.clipboard.writeText(text);
+        e.target.textContent = "Copied";
+      } catch (err) {
+        e.target.textContent = "Select and copy the text above";
+      }
+      setTimeout(() => (e.target.textContent = "Copy citation"), 2000);
+    });
+  </script>
+  <script src="./assets/js/site.js"></script>
+</body>
+
+</html>

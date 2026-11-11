@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explorer | PGF-Explorer</title>
+  <link rel="stylesheet" href="./assets/css/site.css?v=1.0.0" />
+  <link rel="stylesheet" href="./assets/css/explorer.css?v=1.0.0" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="./index.html" aria-label="PGF-Explorer home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0b1f3a" stroke-width="2" stroke-linecap="round">
+            <path d="M4 12h5M9 6v12M9 6h5M9 18h5M14 3v6M14 15v6M14 3h6M14 9h6M14 15h6M14 21h6" />
+          </svg>
+        </span>
+        <span class="brand__name">PGF-Explorer</span>
+      </a>
+      <button class="site-nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav class="site-nav" id="siteNav" aria-label="Main">
+        <a href="./index.html">Home</a>
+        <a href="./explorer.html" class="is-active" aria-current="page">Explorer</a>
+        <a href="./downloads.html">Downloads</a>
+        <a href="./about.html">About &amp; citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tb-main">
+    <aside class="tb-facets" id="facets" aria-label="Filters">
+      <div class="tb-facets__head">
+        <h2>Filters</h2>
+        <button type="button" class="tb-link" id="clearAll">Clear all</button>
+      </div>
+      <div id="facetList"></div>
+    </aside>
+
+    <section class="tb-body">
+      <div class="tb-toolbar">
+        <input id="q" type="search" placeholder="Search titles, families, species, authors, DOI" aria-label="Search" />
+        <div class="tb-toolbar__right">
+          <span id="count" class="tb-count"></span>
+          <details class="tb-columns">
+            <summary>Columns</summary>
+            <div id="columnChooser" class="tb-columns__menu"></div>
+          </details>
+          <button type="button" class="tb-btn" id="download">Download view (CSV)</button>
+        </div>
+      </div>
+      <div id="chips" class="tb-chips"></div>
+
+      <div class="tb-tablewrap">
+        <table class="tb-table" id="table">
+          <thead id="thead"></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+
+      <div class="tb-pager">
+        <button type="button" class="tb-btn tb-btn--ghost" id="prev">Previous</button>
+        <span id="pageInfo"></span>
+        <button type="button" class="tb-btn tb-btn--ghost" id="next">Next</button>
+        <label>Rows
+          <select id="pageSize">
+            <option>25</option>
+            <option selected>50</option>
+            <option>100</option>
+          </select>
+        </label>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <h4>PGF-Explorer</h4>
+        <p>Click a title to see the full record and the sentence behind each value. "—" means not reported.</p>
+        <p>Code: MIT License &middot; Data: CC BY 4.0</p>
+      </div>
+      <div>
+        <h4>Database</h4>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./downloads.html">Downloads</a></li>
+          <li><a href="./about.html">About &amp; citation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="https://github.com/harisbio/Genome_wide_PDF_extractor" target="_blank" rel="noopener">Extraction program</a></li>
+          <li><a href="https://github.com/harisbio/Meta_Analysis_Genomewide_In_silico_studies" target="_blank" rel="noopener">Meta-analysis code</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./data/bundle.js"></script>
+  <script src="./assets/js/site.js"></script>
+  <script src="./assets/js/explorer.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "pgf-explorer",
+  "version": "1.0.0",
+  "description": "PGF-Explorer: a database of genome-wide gene family identification studies in plants",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve-local.mjs",
+    "build": "python scripts/build_database.py"
+  },
+  "author": "Muhammad Haris",
+  "license": "MIT"
+}
